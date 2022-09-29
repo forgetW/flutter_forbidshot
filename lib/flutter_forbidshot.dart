@@ -15,6 +15,8 @@ class FlutterForbidshot {
     if (Platform.isIOS) {
       final bool isCaptured = await _methodChannel.invokeMethod('isCaptured') as bool;
       return isCaptured;
+    }else {
+      return false;
     }
   }
 
@@ -24,6 +26,8 @@ class FlutterForbidshot {
         return event;
       },
       );
+    }else {
+      return Stream.value('null');
     }
   }
 

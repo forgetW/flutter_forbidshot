@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool isCaptured = false;
-  StreamSubscription<void> subscription;
+  late StreamSubscription<void> subscription;
 
   @override
   void initState() {
@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void dispose() {
     super.dispose();
-    subscription?.cancel();
+    subscription.cancel();
   }
 
   @override
